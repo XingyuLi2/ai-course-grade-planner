@@ -12,12 +12,9 @@
 
 ## 2. 截图
 
-- [配套材料入口](../assets/screenshots/01-import.jpg)
-- [预计试算](../assets/screenshots/02-forecast.jpg)
-- [确认实际成绩](../assets/screenshots/03-confirm-score.jpg)
-- [更新后刷新恢复](../assets/screenshots/04-saved-score.jpg)
+- [主界面截图](../assets/screenshots/main-interface.png)
 
-4张截图已取得；录屏尚未完成。本次进入已有演示课程进行核对与更新，没有重新执行材料生成，不能把入口截图当成生成验收。
+当前仅保留一张横版主界面截图；早期4张分步骤截图已从当前版本移除，录屏尚未完成。此前浏览器走查进入已有演示课程进行核对与更新，没有重新执行材料生成，不能把主界面截图当成生成验收。
 
 ## 3. 约90秒讲解顺序
 

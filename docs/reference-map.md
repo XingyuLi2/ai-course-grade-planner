@@ -1,6 +1,6 @@
 # 参考来源与文档组织
 
-查阅日期：2026-11-25。参考项目：[MysteryHost AI Lite](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main)。采用其“产品展示 → 需求与设计 → Prompt → 状态 → 评测 → 学习笔记”的组织思路，内容围绕课程分数规划 Demo 的评分规则提取、目标试算与分数持续更新编写；当前提取仍为配套材料的模拟提取。
+查阅日期：2026-11-25。参考项目：[MysteryHost AI Lite](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main)。采用其“产品展示 → 需求与设计 → Prompt → 状态 → 评测 → 学习笔记”的组织思路，内容围绕课程成绩规划 Demo 的评分规则提取、目标试算与分数持续更新编写；当前提取仍为配套材料的模拟提取。
 
 ## 内容对应
 
