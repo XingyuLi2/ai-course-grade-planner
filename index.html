@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="确认一次课程规则，持续更新成绩，查看目标差距与预计成绩试算。单课程本地交互 Demo。">
+  <title>AI 课程成绩规划工具｜产品设计与交互 Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./student-ui.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">跳到主要内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">分</span><span>课程成绩规划<small>导入一次，持续更新</small></span></a>
+    <div class="sidebar-caption">我的课程</div>
+    <div id="course-label" class="course-label">尚未建立课程</div>
+    <nav aria-label="主要导航">
+      <button id="nav-dashboard" type="button" class="nav-button active">我的成绩</button>
+      <button id="nav-import" type="button" class="nav-button">导入课程材料</button>
+      <button id="nav-rules" type="button" class="nav-button">修正识别结果</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <p class="eyebrow">一次核对，持续更新</p>
+      <p>规则留在这里。下次出分时，只更新你的成绩。</p>
+      <span class="local-label">仅保存在此浏览器</span>
+    </div>
+  </aside>
+  <div class="page">
+    <header class="topbar"><span>AI 课程成绩规划工具</span><span id="save-status" role="status" aria-live="polite">正在读取本地记录…</span></header>
+    <main id="main" tabindex="-1">
+      <div id="storage-alert" role="alert"></div>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <section id="startup-panel" class="panel" aria-live="polite">
+        <h1 id="startup-title">正在打开课程工具…</h1>
+        <p id="startup-description" style="margin-top:14px">请通过本地网址打开。直接双击 HTML 文件时，浏览器无法正常加载这份工具。</p>
+        <p style="margin-top:16px"><a href="http://127.0.0.1:8000/dist/">打开课程 Demo</a></p>
+        <details style="margin-top:16px"><summary>如果本地网址无法连接</summary><p>在包含 serve.py 的产品文件夹中打开终端，运行下面的命令，并保持终端窗口开着：</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">python3 serve.py</pre></details>
+        <details id="startup-error" hidden style="margin-top:16px"><summary>查看错误信息</summary><pre id="startup-error-detail" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre></details>
+      </section>
+      <section id="import" hidden></section>
+      <section id="dashboard"></section>
+      <section id="rules" hidden></section>
+    </main>
+    <footer>单课程 · 无账号与云同步 · 网页未接入 AI 模型<span>计算只依据你确认的规则</span></footer>
+  </div>
+  <dialog id="replace-dialog" aria-labelledby="replace-title">
+    <h2 id="replace-title">替换当前课程？</h2>
+    <p>这里只保存一门课程。继续后，当前规则、实际成绩和预计成绩会被替换，无法撤销。</p>
+    <p class="muted">如需保留，请先复制重要内容。</p>
+    <div class="actions"><button id="cancel-replace" type="button">保留当前课程</button><button id="confirm-replace" type="button" class="danger-button">确认替换</button></div>
+  </dialog>
+  <dialog id="score-dialog" aria-labelledby="score-title" aria-describedby="score-original">
+    <h2 id="score-title">修改已出成绩</h2>
+    <p id="score-original" class="muted"></p>
+    <div id="score-entry">
+      <label class="field"><span>新的已出成绩</span><input id="score-value" type="text" inputmode="decimal" maxlength="80" autocomplete="off"><small id="score-max"></small></label>
+    </div>
+    <div id="score-review" hidden></div>
+    <p id="score-error" class="inline-error" role="alert"></p>
+    <div class="actions"><button data-action="score-cancel" type="button">取消，保留原分数</button><button id="score-next" data-action="score-next" class="primary" type="button">下一步：核对分数</button><button id="score-confirm" data-action="score-confirm" class="primary" type="button" hidden>确认更新已出成绩</button></div>
+  </dialog>
+  <dialog id="rename-dialog" aria-labelledby="rename-title">
+    <h2 id="rename-title">修正作业或考试名称</h2>
+    <label class="field"><span>项目名称</span><input id="rename-value" maxlength="150"></label>
+    <p class="small-text muted">改名后，这项的占比、满分和已保存成绩都会保留。</p>
+    <p id="rename-error" class="inline-error" role="alert"></p>
+    <div class="actions"><button data-action="rename-cancel" type="button">取消</button><button class="primary" data-action="rename-save" type="button">保存名称</button></div>
+  </dialog>
+  <noscript>请启用 JavaScript，以在浏览器中计算和保存课程。</noscript>
+  <script src="./startup.js"></script>
+</body>
+</html>

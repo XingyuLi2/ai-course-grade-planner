@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title description">
+  <title id="title">数据分析基础：演示课程材料</title>
+  <desc id="description">合成演示样例，不代表学校真实评分规则。课程总评100分，作业A占30%，满分20分，已得16分；作业B占20%，满分40分，未出分；期末考试占50%，满分100分，未出分。总评至少50分且期末至少50%，无其他及格要求。目标P为50、D为75，给分单位未说明。</desc>
+  <rect width="960" height="560" rx="16" fill="#f4f7f7"/>
+  <rect x="24" y="24" width="912" height="512" rx="10" fill="#fff" stroke="#d5e1e0"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" fill="#18343a">
+    <rect x="56" y="49" width="96" height="28" rx="5" fill="#fff0cd"/>
+    <text x="104" y="69" text-anchor="middle" font-size="16" fill="#74500c">演示样例</text>
+    <text x="56" y="119" font-size="30" font-weight="700">数据分析基础</text>
+    <text x="56" y="151" font-size="17" fill="#5c7076">课程总评满分：100 分</text>
+    <rect x="56" y="174" width="848" height="42" rx="5" fill="#edf4f3"/>
+    <g font-size="17" font-weight="600">
+      <text x="76" y="202">考核项目</text><text x="350" y="202">占总评比例</text><text x="553" y="202">这项满分</text><text x="737" y="202">已出成绩</text>
+    </g>
+    <g font-size="19">
+      <text x="76" y="249">作业 A</text><text x="350" y="249">30%</text><text x="553" y="249">20 分</text><text x="737" y="249">16 / 20</text>
+      <text x="76" y="300">作业 B</text><text x="350" y="300">20%</text><text x="553" y="300">40 分</text><text x="737" y="300" fill="#6d7e83">未出分</text>
+      <text x="76" y="351">期末考试</text><text x="350" y="351">50%</text><text x="553" y="351">100 分</text><text x="737" y="351" fill="#6d7e83">未出分</text>
+    </g>
+    <g stroke="#e1e9e8"><path d="M56 269H904"/><path d="M56 320H904"/><path d="M56 371H904"/></g>
+    <text x="56" y="405" font-size="18" font-weight="600">及格要求：总评 ≥ 50 分，并且期末考试得分率 ≥ 50%。</text>
+    <text x="56" y="434" font-size="16" fill="#536b71">无其他及格要求；演示目标 P = 50、D = 75，仅为自定义标签。</text>
+    <text x="56" y="464" font-size="16" fill="#536b71">给分单位未说明，不默认按整数分计算。</text>
+    <text x="56" y="508" font-size="15" fill="#8b6727">以上课程规则与成绩为人工构造的演示样例，不代表任何学校的真实规定。</text>
+  </g>
+</svg>
