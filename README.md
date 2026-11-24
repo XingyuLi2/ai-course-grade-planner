@@ -77,7 +77,7 @@ python3 serve.py
 | 模型实验 | Prompt、5个合成输入、人工答案、记录模板已备；全部未运行 | [实验准备](evaluation/README.md) |
 | 用户观察 | 有发起人反馈与实际迭代；同学观察未开始 | [产品案例](docs/product-case.md) |
 | 网页模型接入 | 未接入，配套材料模拟提取 | [导入实现](dist/import-view.mjs) |
-| 发布 | GitHub代码发布状态以远端仓库为准；公网Demo尚未部署 | [发布边界](docs/repository-release.md) |
+| 发布 | 已上传至公开GitHub仓库；公网Demo尚未部署 | [发布记录](docs/repository-release.md) |
 
 93项是自动检查数，包含内存存储与 DOM 替身；不是模型准确率、用户测试人数或完整浏览器验收。历史记录保留原日期与当时范围。
 
@@ -102,10 +102,6 @@ node --experimental-vm-modules tests/run-all.mjs
 | [项目取舍笔记](learning-notes/decisions.md) | 用项目例子解释判断，附理解自检 |
 | [参考映射](docs/reference-map.md) | 实际阅读来源、组织方式与版本差异 |
 
-## 角色、来源与后续
-
-发起人提供使用场景、确定核心流程和演示边界，并对手工建课、成绩保护及学生用语提出反馈；Codex辅助方案细化、代码、测试和文档。这里不把辅助实现写成个人独立开发，也不虚构访谈、准确率或效率提升。
-
-作品集组织参考 [MysteryHost AI Lite](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main)：借鉴README、设计、Prompt、状态、评测和学习笔记的导航方式，没有复制其代码、截图、文案或成果，不为对齐目录增加功能。当前未设置 LICENSE，不声明采用参考项目的许可。
+## 后续
 
 下一步补真实浏览器与截图／录屏，再执行独立模型实验和同学任务观察；缺少API不阻止当前演示与公开文档。代码上传和公网Demo部署分别核验。
