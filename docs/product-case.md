@@ -4,13 +4,13 @@
 
 把课程规则和成绩保存下来，出分后更新一项记录，继续查看目标差距。
 
-[GitHub 仓库](https://github.com/XingyuLi2/ai-course-grade-planner) · [本地体验说明](../README.md) · [产品需求](product-requirements.md) · [验证记录](verification-portfolio-2026-11-25.md)
+[在线体验](https://xingyuli2.github.io/ai-course-grade-planner/) · [GitHub 仓库](https://github.com/XingyuLi2/ai-course-grade-planner) · [产品需求](product-requirements.md) · [验证记录](verification-portfolio-2026-11-25.md)
 
 ## 1. 项目概述
 
 AI 课程成绩规划工具面向需要根据课程规则安排目标分数的学生。核心流程为 **材料导入 → 生成成绩表 → 核对与修正 → 预计试算 → 持续更新**。
 
-当前交付单课程交互 Demo：配套截图和文字采用明确标注的“模拟提取”，计算、成绩修改确认和浏览器本地保存真实实现。产品代码已发布到 GitHub，公网 Demo 尚未部署。
+当前交付单课程交互 Demo：配套截图和文字采用明确标注的“模拟提取”，计算、成绩修改确认和浏览器本地保存真实实现。产品代码已发布到 GitHub，公网 Demo 已通过 GitHub Pages 发布，可直接访问。
 
 ## 2. 问题与目标用户
 
@@ -90,7 +90,7 @@ AI 课程成绩规划工具面向需要根据课程规则安排目标分数的�
 | 完整浏览器交互 | 已完成部分核心操作走查并取得4张截图；完整验收与录屏待补 | [走查记录](verification-browser-2026-11-25.md)、[验收清单](browser-checklist.md) |
 | 真实模型提取 | Prompt v0.1 与 5 个合成案例已准备，实验未执行 | [Prompt](../prompts/extract-rules.md)、[实验材料](../evaluation/README.md) |
 | 同学任务观察 | 尚未开展 | [验证方案](validation.md) |
-| 发布 | GitHub 代码已上传；公网 Demo 未部署 | [发布记录](repository-release.md) |
+| 发布 | GitHub 代码与截图已上传；Pages Demo已公开，首页与12个网页资源核验通过，线上交互复测待补 | [发布记录](repository-release.md) |
 
 自动检查包含 DOM 与存储替身，覆盖已列出的计算和更新逻辑；模型提取质量与真实浏览器表现分别验证。
 
