@@ -12,12 +12,13 @@
 
 ## 发布状态
 
+- 当前快照：`gh-pages` 最新发布提交为 `3038fcf751bcd0ee17517ae6f6334f4780342c49`，项目名为“课程成绩规划 Demo”；[对应部署任务](https://github.com/XingyuLi2/ai-course-grade-planner/actions/runs/45452200325)已成功。Pages 来源为 `gh-pages /`（`build_type=legacy`），12个网页文件与产品 `dist/` 对应，另含 `.nojekyll`。下方首次发布记录保留历史提交，不代表当前分支头。
 - Git：产品目录独立仓库，main保存源码与文档，gh-pages保存发布网页，origin 指向上述公开仓库；根求职目录没有初始化Git。
 - GitHub：已完成首次代码推送，首次提交为 `daa9df83a58efe28a14001e90e099a4674aaf393`。通过GitHub API核对main提交一致、树未截断，48个文件完整，含12个dist源码文件；后续文档更新见提交历史。
 - 公网Demo：已发布到 [GitHub Pages](https://xingyuli2.github.io/ai-course-grade-planner/)，HTTPS已启用；首页与12个网页资源均通过公开访问核验。README首页使用在线链接，`127.0.0.1`仅保留在本地开发说明中。
 - 真实模型后端：不存在；网页提取仍为演示模拟。
 
-GitHub连接器可读取资料，但没有创建仓库能力，因此创建使用本机GitHub CLI、推送使用Git。CLI在沙盒内的联网失败曾使登录检查显示失败；沙盒外实际核对为 `XingyuLi2`，无需重新登录。仅在产品仓库设置GitHub noreply提交邮箱，未更改全局Git身份或凭据。
+提交使用仓库内的 GitHub noreply 邮箱；公开范围以实际提交清单为准。
 
 ## 可检查的发布依据
 
