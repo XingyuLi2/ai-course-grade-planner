@@ -3,7 +3,6 @@
 ## 项目访问
 
 - **[在线体验 Demo](https://xingyuli2.github.io/ai-course-grade-planner/)**：直接打开，无需安装或 API Key
-- [GitHub 仓库](https://github.com/XingyuLi2/ai-course-grade-planner)
 
 配套材料使用“模拟提取”，计算与保存真实运行。课程记录保存在当前浏览器，不会同步给其他访问者；本机版与在线版的记录互不迁移。
 
@@ -11,30 +10,13 @@
 
 **预计试算：作业 B 预计 30 分，目标总评 75 分，期末至少需要 72 分。**
 
-<img src="assets/screenshots/02-forecast.jpg" alt="真实运行界面：实际已获24分，B预计30，D目标期末要求72分" width="560">
-
-<details>
-<summary>查看材料导入、成绩确认与保存后界面</summary>
-
-### 材料导入
-
-![配套截图导入，演示样例与模拟提取标识](assets/screenshots/01-import.jpg)
-
-### 已出成绩确认
-
-![核对作业B从未出分更新为32分](assets/screenshots/03-confirm-score.jpg)
-
-### 持续更新
-
-![实际32分确认后刷新保留，实际总评40，期末要求70](assets/screenshots/04-saved-score.jpg)
-
-</details>
-
-截图来自2026-11-25实际运行的合成演示课程，保留“演示样例 / 模拟提取”标识。[操作与截图记录](docs/verification-browser-2026-11-25.md)
+<img src="assets/screenshots/02-forecast.jpg" alt="课程成绩规划主界面：演示样例，B预计30分，目标总评75分时，期末至少需要72分" width="691">
 
 ---
 
 ## 1. 项目简介
+
+这是我的 AI 产品经理学习作品集，围绕课程成绩规划练习需求分析、产品设计与验证。
 
 AI 课程成绩规划工具是一个面向学生的单课程交互 Demo。用户从课程材料生成成绩表，核对规则后填写预计分数，查看距离目标还差多少；实际成绩公布后，在同一份记录中继续更新。
 
@@ -158,7 +140,6 @@ ai-course-grade-planner/
 | --- | --- |
 | [项目学习笔记](learning-notes/decisions.md) | 从具体决策理解结构化输出、状态与评测 |
 | [自动检查记录](docs/verification-portfolio-2026-11-25.md) | 93项检查的方法、环境与结果 |
-| [浏览器走查与截图](docs/verification-browser-2026-11-25.md) | 实际操作、画面与覆盖范围 |
 | [独立模型实验](evaluation/README.md) | Prompt、5个合成案例及待执行实验 |
 
 ## 9. 当前版本
@@ -169,7 +150,7 @@ ai-course-grade-planner/
 | --- | --- |
 | 材料导入、成绩表、预计试算、确认修改与本地保存 | 已实现；提取为明确标注的模拟 |
 | 自动检查 | 93/93通过：计算52、存储13、成绩编辑11、应用事件14、启动3 |
-| 浏览器与截图 | 已走查确认、试算、录入、取消与刷新恢复，已取得4张截图；完整验收待补 |
+| 浏览器交互 | 已走查确认、试算、录入、取消与刷新恢复；完整验收待补 |
 | 真实模型实验 | Prompt与5个合成案例已备，尚未执行 |
 | 同学观察 | 尚未开始 |
 | 发布 | GitHub代码与截图已上传；GitHub Pages Demo已发布，首页与12个网页资源通过公开访问核验；线上交互复测待补 |
