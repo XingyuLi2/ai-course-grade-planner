@@ -1,0 +1,72 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "results": [
+    {
+      "name": "应用事件：无记录时进入材料导入，不要求手动建课",
+      "passed": true
+    },
+    {
+      "name": "应用事件：生成样例后直接进入成绩表，一次确认即可试算",
+      "passed": true
+    },
+    {
+      "name": "应用事件：预计成绩立即试算并保存，不增加实际贡献",
+      "passed": true
+    },
+    {
+      "name": "应用事件：修改已出成绩的草稿取消，原记录和显示均保留",
+      "passed": true
+    },
+    {
+      "name": "应用事件：录入成绩必须经过核对和确认，确认后清本项预计",
+      "passed": true
+    },
+    {
+      "name": "应用事件：不合法成绩留在编辑页，不进入确认或覆盖原分数",
+      "passed": true
+    },
+    {
+      "name": "应用事件：重新创建应用读取同一保存记录，已出成绩继续锁定",
+      "passed": true
+    },
+    {
+      "name": "应用事件：修改项目名保留成绩、关联要求与确认状态",
+      "passed": true
+    },
+    {
+      "name": "应用事件：修正规则期间不自动保存，取消返回恢复原记录",
+      "passed": true
+    },
+    {
+      "name": "应用事件：存储失败后在规则草稿中重试，只保存已接受的记录",
+      "passed": true
+    },
+    {
+      "name": "应用事件：确认规则修正后保存新值，重建应用仍保留已出成绩",
+      "passed": true
+    },
+    {
+      "name": "应用事件：自己的文本和图片只预览，不生成无关样例或改已有课程",
+      "passed": true
+    },
+    {
+      "name": "应用事件：已有课程再次生成样例须确认，取消不覆盖成绩",
+      "passed": true
+    },
+    {
+      "name": "应用事件：无法读取的旧记录原样保留，显示存储问题",
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "executedAt": "2026-11-24T16:29:58.152Z",
+    "runtime": "v24.22.3",
+    "platform": "darwin/arm64",
+    "command": "node --experimental-vm-modules tests/run-all.mjs --write",
+    "inputType": "synthetic",
+    "scope": "Automated module and substitute-based checks; not browser acceptance or model evaluation",
+    "method": "Node VM with DOM and storage substitutes"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "name": "成绩保护：编辑草稿及校验均不改变原成绩",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：首次确认录入后只清空该项预计，保留其他分数和规则",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：已出成绩确认修改，原记录仍保持不变",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：零分是已出成绩，不能变成空值",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：确认清除成绩后变为未知，不恢复旧预计",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：超满分、负数及非数字均拒绝，原值保留",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：未指定给分单位时允许小数，不默认整数",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：给分单位使用准确小数比较",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：无效满分或给分单位阻止新成绩保存，但可以确认清除",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：编辑中原值变动时拒绝覆盖更新的成绩",
+      "passed": true
+    },
+    {
+      "name": "成绩保护：找不到项目或项目ID重复时不误写其他项",
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "executedAt": "2026-11-24T16:29:58.152Z",
+    "runtime": "v24.22.3",
+    "platform": "darwin/arm64",
+    "command": "node --experimental-vm-modules tests/run-all.mjs --write",
+    "inputType": "synthetic",
+    "scope": "Automated module and substitute-based checks; not browser acceptance or model evaluation",
+    "method": "Pure validation and commit checks"
+  }
+}

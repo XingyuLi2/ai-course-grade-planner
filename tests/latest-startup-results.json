@@ -1,0 +1,28 @@
+{
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "results": [
+    {
+      "name": "直接打开HTML时显示网址引导，不加载应用模块",
+      "passed": true
+    },
+    {
+      "name": "HTTP应用启动成功后隐藏加载提示",
+      "passed": true
+    },
+    {
+      "name": "应用模块失败时显示错误信息，不留下空白",
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "executedAt": "2026-11-24T16:29:58.152Z",
+    "runtime": "v24.22.3",
+    "platform": "darwin/arm64",
+    "command": "node --experimental-vm-modules tests/run-all.mjs --write",
+    "inputType": "synthetic",
+    "scope": "Automated module and substitute-based checks; not browser acceptance or model evaluation",
+    "method": "Node VM with DOM and module-load substitutes"
+  }
+}

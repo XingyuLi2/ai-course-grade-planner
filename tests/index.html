@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>计算与存储验收 · AI 课程成绩规划工具</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #18342b; background: #f5f8f7; }
+    body { max-width: 980px; margin: 3rem auto; padding: 0 1.25rem; }
+    h1 { font-size: 1.75rem; } p, li { font-size: 1rem; line-height: 1.65; }
+    li { margin: .6rem 0; } .failed { color: #a82c20; } .passed { color: #226144; }
+    pre { white-space: pre-wrap; font-size: .875rem; color: #8d251c; }
+    #summary { padding: 1rem; background: white; border: 1px solid #cadbd2; }
+  </style>
+</head>
+<body>
+  <h1>计算、存储与改分检查</h1>
+  <p>使用合成输入和独立人工答案，覆盖契约 12 个算例及规则边界；存储异常通过内存模拟检查。这不替代实际浏览器保存走查，也不代表真实模型实验或用户观察完成。</p>
+  <p id="summary" role="status">正在运行…</p>
+  <ol id="results"></ol>
+  <script type="module">
+    import { runTests } from './calculation.test.mjs';
+    import { runStorageTests } from './storage.test.mjs';
+    import { runScoreEditTests } from './score-edit.test.mjs';
+    const calculation = runTests();
+    const storage = runStorageTests();
+    const scoreEdit = runScoreEditTests();
+    const report = {total: calculation.total + storage.total + scoreEdit.total, passed: calculation.passed + storage.passed + scoreEdit.passed,
+      failed: calculation.failed + storage.failed + scoreEdit.failed, results: [...calculation.results, ...storage.results, ...scoreEdit.results],
+      suites: {calculation, storage, scoreEdit}};
+    window.__testResults = report;
+    document.querySelector('#summary').textContent = `${report.passed}/${report.total} 通过；${report.failed} 失败（计算 ${calculation.passed}/${calculation.total}；存储 ${storage.passed}/${storage.total}；改分 ${scoreEdit.passed}/${scoreEdit.total}）`;
+    document.querySelector('#summary').className = report.failed ? 'failed' : 'passed';
+    document.title = `${report.failed ? 'FAIL' : 'PASS'} · ${report.passed}/${report.total} 计算与存储检查`;
+    for (const result of report.results) {
+      const li = document.createElement('li'); li.className = result.passed ? 'passed' : 'failed';
+      li.textContent = `${result.passed ? '通过' : '失败'} · ${result.name}`;
+      if (result.error) { const pre = document.createElement('pre'); pre.textContent = result.error; li.append(pre); }
+      document.querySelector('#results').append(li);
+    }
+  </script>
+</body>
+</html>

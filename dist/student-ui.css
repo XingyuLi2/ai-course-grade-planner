@@ -1,0 +1,197 @@
+/* Student-facing refinement: less scrolling, local explanations, one task at a time. */
+#main{padding-top:26px;padding-bottom:30px}
+.topbar{min-height:58px}
+.heading{margin-bottom:20px}
+.heading h1{font-size:1.8rem}
+.heading p{margin-top:8px}
+.panel{padding:22px;margin-bottom:18px}
+.panel-head{margin-bottom:14px}
+.rules-heading{align-items:center}
+.rules-status{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.materials-disclosure{background:white;border:1px solid var(--line);border-radius:8px;margin-bottom:16px}
+.materials-disclosure>summary{padding:12px 18px;color:var(--ink);font-size:.9rem}
+.summary-hint{font-size:.8rem;color:var(--muted);font-weight:400;margin-left:16px}
+.materials-content{padding:0 20px 18px}
+.materials-content>.field:last-child{margin-bottom:0}
+.materials-content textarea{min-height:80px}
+.materials-content .source-material{max-height:280px;overflow:auto}
+.materials-content .form-grid{margin-top:14px;align-items:start}
+.rule-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:16px;scroll-margin-top:20px}
+.rule-steps button{display:flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:7px;padding:11px 10px;color:var(--muted);font-weight:500}
+.rule-steps button.active{border-color:var(--accent);color:var(--accent);background:var(--accent-light);font-weight:650}
+.step-number{display:grid;place-items:center;min-width:23px;height:23px;border:1px solid #b8c9ce;border-radius:50%;font-size:.8rem}
+.active .step-number{background:var(--accent);border-color:var(--accent);color:white}
+.step-issue{font-size:.75rem;color:var(--bad);font-weight:500}
+.step-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
+.step-heading h2{font-size:1.1rem;scroll-margin-top:22px}
+.section-help{color:var(--muted);font-size:.875rem;margin-bottom:16px;max-width:74ch}
+.section-help strong{font-weight:600;color:var(--ink)}
+.compact-form .field{margin-bottom:16px}
+.compact-form{max-width:1100px;margin-left:auto;margin-right:auto}
+.compact-items{gap:10px}
+.compact-item{padding:12px 14px;background:#fbfcfc}
+.assessment-fields{display:grid;grid-template-columns:minmax(130px,1.6fr) minmax(115px,1fr) minmax(115px,1fr) auto;gap:12px;align-items:end}
+.assessment-fields .field{margin:0}
+.assessment-fields>button{margin-bottom:1px}
+.compact-item .field>span{font-size:.85rem}
+.optional-details{margin-top:8px;font-size:.875rem}
+.optional-details>summary{font-size:.8rem;color:var(--muted);font-weight:450;padding:3px 0}
+.optional-details[open]>summary{margin-bottom:12px;color:var(--accent)}
+.optional-details .field{margin-bottom:0}
+.optional-details .field small{font-size:.8rem}
+.detail-state{font-size:.75rem;color:var(--accent);margin-left:12px}
+.item-list-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
+.target-editor-heading{padding-top:16px;margin-top:22px;border-top:1px solid var(--line);margin-bottom:16px}
+.target-editor-heading p{font-size:.875rem;color:var(--muted);margin-top:5px}
+.target-editor-row{max-width:700px}
+.target-editor-row .field{margin:0}
+.plain-example{display:flex;align-items:baseline;gap:14px;padding:12px 16px;background:#edf5f2;border-left:3px solid #62a99c;font-size:.875rem;margin:14px 0;color:#275b50}
+.plain-example strong{white-space:nowrap;font-size:.8rem}
+.condition-origin{margin:16px 0 8px}
+.compact-condition{padding:14px 16px}
+.condition-fields{display:grid;grid-template-columns:1.2fr 1.25fr .7fr 1.2fr;gap:12px;align-items:end}
+.condition-fields .field{margin:0}
+.unit-help{font-size:.8rem;color:var(--muted);margin-top:8px}
+.condition-bottom{display:flex;gap:12px;align-items:baseline;justify-content:space-between}
+.condition-bottom details{flex:1;min-width:0}
+.condition-bottom button{flex-shrink:0}
+.special-rules{border-top:1px solid var(--line);margin-top:20px;padding-top:12px}
+.special-rules>summary{font-size:.875rem;color:var(--ink)}
+.special-rules p{margin-bottom:14px}
+.special-rules .field{margin:14px 0}
+.special-rules textarea{min-height:72px}
+.confirm-row{margin:18px 0 0;padding-top:18px;border-top:1px solid var(--line);max-width:75ch}
+#rules{padding-bottom:92px}
+.rule-footer{position:fixed;bottom:0;left:232px;right:0;z-index:12;padding:14px 42px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fff;border-top:1px solid #c8d9da;box-shadow:0 -4px 12px #173b2c08}
+.rule-footer .actions{flex-shrink:0}
+#rule-validation{scroll-margin-top:24px}
+#rule-validation .alert{margin-bottom:16px}
+.compact-metrics{margin:18px 0 22px}
+.compact-metrics .metric{padding:16px 22px}
+.compact-metrics .big-number{font-size:2.15rem}
+.compact-metrics .metric p{font-size:.8rem;margin-top:3px}
+.compact-metrics .label{font-size:.875rem}
+.workspace-grid{gap:20px;grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr)}
+.results-column{min-width:0}
+.score-table td{padding-top:13px;padding-bottom:13px}
+.score-table td:first-child{min-width:80px}
+.score-table .score-input{width:92px}
+.switcher{margin-bottom:16px}
+#target-results .field{margin-bottom:12px}
+.target-result{padding:12px 0 0}
+.target-top{align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.requirement{font-size:2.5rem;margin:4px 0 10px}
+.requirement-label{color:var(--ink)!important;font-weight:550}
+.calculation-detail{border-top:1px solid var(--line);padding-top:12px;margin-top:16px!important}
+.calculation-detail summary{font-size:.875rem}
+.pass-box{margin-bottom:0;font-size:.875rem}
+.hurdle-row{padding:12px 0 0;margin-top:12px}
+.hurdle-row h3{font-size:.9rem}
+.hurdle-row p{font-size:.8rem}
+.table-note{margin-top:12px;padding-top:12px}
+footer{font-size:.78rem}
+@media(max-width:1200px){
+  .rule-footer{left:205px;padding:14px 26px}
+  .workspace-grid{grid-template-columns:1fr}
+}
+@media(min-width:1100px) and (max-width:1200px){
+  .workspace-grid{grid-template-columns:minmax(0,1fr) minmax(320px,.95fr)}
+}
+@media(max-width:900px){
+  .condition-fields{grid-template-columns:1fr 1fr}
+  .rules-status>.small-text{display:none}
+  .rule-steps button{gap:6px;padding:10px 6px;font-size:.8rem}
+  .step-issue{display:none}
+  .rule-footer>span{max-width:230px}
+  .assessment-fields{grid-template-columns:1.2fr 1fr 1fr}
+  .assessment-fields>button{grid-column:3;justify-self:end;min-height:30px;padding:0 8px}
+}
+@media(max-width:720px){
+  #main{padding:20px 16px 24px}
+  .heading h1{font-size:1.5rem}
+  .rules-heading .actions{margin-top:10px}
+  .rules-heading{margin-bottom:12px}
+  .rules-status{gap:6px;margin-bottom:10px}
+  .summary-hint{display:none}
+  .materials-disclosure>summary{padding:10px 14px}
+  .materials-content{padding:0 14px 14px}
+  .rule-steps{gap:4px}
+  .rule-steps button{flex-direction:column;gap:5px;padding:8px 3px}
+  .step-number{min-width:20px;height:20px;font-size:.75rem}
+  .compact-form{padding:18px 14px}
+  .step-heading{margin-bottom:12px}
+  .assessment-fields{grid-template-columns:1fr 1fr;gap:10px}
+  .assessment-fields .field:first-child{grid-column:1/-1}
+  .assessment-fields>button{grid-column:auto}
+  .compact-item{padding:12px}
+  .item-list-footer{align-items:flex-start;flex-direction:column;gap:2px}
+  .plain-example{display:block;padding:12px}
+  .plain-example strong{display:block;margin-bottom:4px}
+  .condition-fields{gap:10px}
+  .condition-bottom{align-items:flex-start;flex-direction:column;gap:0}
+  .condition-bottom details{width:100%}
+  .rule-footer{left:0;padding:12px 16px;justify-content:flex-end}
+  .rule-footer>span{display:none}
+  .rule-footer .actions{width:100%;justify-content:space-between}
+  #rules{padding-bottom:80px}
+  .compact-metrics .metric{padding:12px 16px}
+  .compact-metrics .big-number{font-size:1.8rem}
+  .compact-metrics .metric p{font-size:.75rem}
+  .score-table .score-input{width:82px}
+  .requirement{font-size:2.1rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Import first; the score table and the answer share the first working screen. */
+.import-screen{max-width:880px;margin:0 auto}
+.import-heading h1{font-size:1.9rem}
+.import-options{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.import-option.active{border-color:var(--accent);background:var(--accent-light);color:var(--accent)}
+.import-card{padding:20px;margin-bottom:14px}
+.import-tags{display:flex;gap:8px;margin-bottom:12px}
+.import-sample-image{display:block;width:100%;max-height:300px;object-fit:contain;border:1px solid var(--line);border-radius:7px;background:#fafcfb}
+.import-source{margin:12px 0}
+textarea.import-source{min-height:210px;max-height:300px;font-size:.875rem;background:#fafcfb}
+.import-source .source-material{max-height:260px;overflow:auto}
+.import-footer{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.import-footer .primary{min-width:180px}
+.review-strip{display:flex;gap:20px;align-items:center;justify-content:space-between;border:1px solid #c0dcd4;border-radius:8px;background:#edf7f2;padding:16px 20px;margin-bottom:18px}
+.review-strip p{font-size:.85rem;color:var(--muted);margin-top:5px;max-width:70ch}
+.review-strip button{flex-shrink:0}
+.grade-workspace{grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr)}
+.grade-workspace .table-wrap{overflow-x:auto}
+.grade-workspace .score-table td{padding:12px 8px}
+.grade-workspace .score-table td:first-child{padding-left:0}
+.actual-score{display:flex;align-items:baseline;gap:7px;white-space:nowrap}
+.actual-score strong{font-size:1.3rem;font-variant-numeric:tabular-nums}
+.actual-score small{font-size:.65rem;color:var(--muted)}
+.score-cell>.text-button{padding:0;min-height:30px;font-size:.8rem}
+button.rename-button{display:block;min-height:26px;font-size:.72rem;padding:0 2px;font-weight:400}
+.grade-workspace .score-table .score-input{width:106px}
+.course-reference{padding:13px 18px;font-size:.85rem}
+.course-reference>summary{font-size:.85rem}
+.course-reference .source-material{max-height:260px;overflow:auto}
+.grade-workspace .compact-metrics{margin:0 0 18px}
+.grade-workspace .compact-metrics .metric{padding:12px}
+.grade-workspace .compact-metrics .big-number{font-size:1.65rem}
+.grade-workspace .compact-metrics .label{font-size:.73rem}
+.grade-workspace .compact-metrics .metric p{font-size:.7rem}
+.grade-workspace .compact-metrics .big-number small{font-size:.8rem}
+dialog{width:min(520px,calc(100vw - 32px));max-height:calc(100vh - 40px);overflow:auto}
+#score-original{font-size:.875rem;margin-bottom:18px}
+#score-entry{margin-top:18px}
+.score-change{padding:18px;background:var(--accent-light);font-size:1.6rem;border-radius:8px;margin:18px 0}
+.score-change strong{color:var(--accent)}
+.inline-error{color:var(--bad);font-size:.875rem;margin-top:12px}
+.pending-help{font-size:.875rem;color:var(--muted);margin-top:12px}
+@media(max-width:1100px){.grade-workspace{grid-template-columns:1fr}.review-strip{flex-wrap:wrap}.heading .actions{max-width:none}}
+@media(max-width:720px){
+  .import-heading h1{font-size:1.5rem}.import-footer{flex-direction:column;align-items:stretch}
+  .import-footer .primary{width:100%}.import-options{gap:6px}.import-option{font-size:.8rem;padding:8px 10px}
+  .import-card{padding:14px}.review-strip{padding:14px}.review-strip button{width:100%}
+  .grade-workspace .panel{padding:16px}.grade-workspace .score-table .score-input{width:90px}
+  .grade-workspace .score-table td{font-size:.8rem}.grade-workspace .panel-head{gap:8px}
+  .grade-workspace .panel-head h2{font-size:1.05rem}.grade-workspace .panel-head p{font-size:.8rem}
+  .grade-workspace .panel-head>.text-button{font-size:.75rem;white-space:nowrap;padding:0}
+  dialog{padding:22px}.score-change{font-size:1.3rem}
+}

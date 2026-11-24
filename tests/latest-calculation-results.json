@@ -1,0 +1,224 @@
+{
+  "total": 52,
+  "passed": 52,
+  "failed": 0,
+  "results": [
+    {
+      "name": "契约例 1：不同满分换算；期末 hurdle 高于总分要求",
+      "passed": true
+    },
+    {
+      "name": "契约例 2：多项未知仅输出加权整体要求",
+      "passed": true
+    },
+    {
+      "name": "契约例 3：预计不改变实际；新实际成绩只贡献一次",
+      "passed": true
+    },
+    {
+      "name": "回归：超过满分的预计只阻止试算，实际贡献仍为 24",
+      "passed": true
+    },
+    {
+      "name": "回归：非数字预计不在实际视角解析，试算仍明确阻止",
+      "passed": true
+    },
+    {
+      "name": "回归：实际已有分数，残留无效预计失效且不阻止两个视角",
+      "passed": true
+    },
+    {
+      "name": "回归：预计违反步长不影响实际要求，但阻止当前试算",
+      "passed": true
+    },
+    {
+      "name": "契约例 4：实际成绩已使目标不可达，要求不得截断为满分",
+      "passed": true
+    },
+    {
+      "name": "契约例 5：预计零分有效；仅当前假设不可达",
+      "passed": true
+    },
+    {
+      "name": "契约例 6：实际总分足够但实际 hurdle 失败；预计不能覆盖",
+      "passed": true
+    },
+    {
+      "name": "契约例 7：填满预计只能按假设达标；假设门槛失败单列",
+      "passed": true
+    },
+    {
+      "name": "契约例 8：全为实际，恰好等于 hurdle；无剩余权重不做除法",
+      "passed": true
+    },
+    {
+      "name": "契约例 9：实际零分不同于未知成绩",
+      "passed": true
+    },
+    {
+      "name": "契约例 10：零权重未知项仍受 hurdle 约束",
+      "passed": true
+    },
+    {
+      "name": "契约例 11：数学下界与已确认步长；向上取整后回代",
+      "passed": true
+    },
+    {
+      "name": "契约例 12：49.9999 不能因显示精度而达到 50",
+      "passed": true
+    },
+    {
+      "name": "精确十进制：0.2 + 0.3 + 0.5 权重合法",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"0.9\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"1.1\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"0.9999\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"-1\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"20\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "非法权重 \"\" 不归一化",
+      "passed": true
+    },
+    {
+      "name": "满分 \"\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "满分 \"0\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "满分 \"-1\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "actual 非法分数 -0.1 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "actual 非法分数 100.0001 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "actual 非法分数 NaN 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "actual 非法分数 Infinity 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "expected 非法分数 -0.1 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "expected 非法分数 100.0001 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "expected 非法分数 NaN 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "expected 非法分数 Infinity 阻止使用该输入的计算视角",
+      "passed": true
+    },
+    {
+      "name": "目标 \"-1\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "目标 \"100.0001\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "目标 \"\" 必须修正",
+      "passed": true
+    },
+    {
+      "name": "未确认规则、未知 hurdle 与冲突都阻止正式结果",
+      "passed": true
+    },
+    {
+      "name": "严格 > 与未支持规则不可静默改写",
+      "passed": true
+    },
+    {
+      "name": "hurdle 必须有阈值、单位、合法项目与范围",
+      "passed": true
+    },
+    {
+      "name": "明确无 hurdle 可计算；低于通过线的个人目标不能等同通过",
+      "passed": true
+    },
+    {
+      "name": "总分已够但未知 hurdle 不允许提前宣称通过",
+      "passed": true
+    },
+    {
+      "name": "多个未知项包含零权重项目时不能冒充唯一期末未知",
+      "passed": true
+    },
+    {
+      "name": "同项多条 AND 门槛取最高原始阈值",
+      "passed": true
+    },
+    {
+      "name": "其他项实际 hurdle 失败不能靠提高唯一未知项弥补",
+      "passed": true
+    },
+    {
+      "name": "其他项预计 hurdle 失败只能判当前假设失败",
+      "passed": true
+    },
+    {
+      "name": "步长须为正，满分与实际／预计分须在步长集合内",
+      "passed": true
+    },
+    {
+      "name": "小数步长从零起算；向上到半分并回代",
+      "passed": true
+    },
+    {
+      "name": "重复项目标识与无目标不允许确认",
+      "passed": true
+    },
+    {
+      "name": "清空预计输入恢复实际计算，计算函数不修改原数据",
+      "passed": true
+    },
+    {
+      "name": "分步错误：不同步骤同时缺失时不得遗漏或重复错误",
+      "passed": true
+    },
+    {
+      "name": "分步错误：待确认与特殊规则归入条件步骤，不能被步骤切换绕过",
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "executedAt": "2026-11-24T16:29:58.152Z",
+    "runtime": "v24.22.3",
+    "platform": "darwin/arm64",
+    "command": "node --experimental-vm-modules tests/run-all.mjs --write",
+    "inputType": "synthetic",
+    "scope": "Automated module and substitute-based checks; not browser acceptance or model evaluation",
+    "method": "Independent hand-calculated synthetic answers"
+  }
+}

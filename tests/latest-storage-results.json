@@ -1,0 +1,68 @@
+{
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "name": "存储：首次打开为空，真实零分与预计值完整往返",
+      "passed": true
+    },
+    {
+      "name": "存储：未完成草稿的空字段可以保存",
+      "passed": true
+    },
+    {
+      "name": "存储：保存快照不随未保存的内存编辑变化",
+      "passed": true
+    },
+    {
+      "name": "存储：JSON 损坏后保留原字节并禁止覆盖",
+      "passed": true
+    },
+    {
+      "name": "存储：未知版本保留原记录并禁止覆盖",
+      "passed": true
+    },
+    {
+      "name": "存储：结构损坏保留原记录；不自动补默认字段",
+      "passed": true
+    },
+    {
+      "name": "存储：当前草稿结构无效不得覆盖上次有效记录",
+      "passed": true
+    },
+    {
+      "name": "存储：空间不足返回失败，保留旧记录，恢复权限后可重试",
+      "passed": true
+    },
+    {
+      "name": "存储：读取被浏览器拒绝后阻止保存并返回可见原因",
+      "passed": true
+    },
+    {
+      "name": "存储：保存前读取被拒绝，明确失败并保留旧值",
+      "passed": true
+    },
+    {
+      "name": "存储：多标签页冲突不得用旧页面覆盖最新课程",
+      "passed": true
+    },
+    {
+      "name": "存储：用户明确重置可清除损坏记录并重新保存",
+      "passed": true
+    },
+    {
+      "name": "存储：重置被拒绝时返回失败并保留记录",
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "executedAt": "2026-11-24T16:29:58.152Z",
+    "runtime": "v24.22.3",
+    "platform": "darwin/arm64",
+    "command": "node --experimental-vm-modules tests/run-all.mjs --write",
+    "inputType": "synthetic",
+    "scope": "Automated module and substitute-based checks; not browser acceptance or model evaluation",
+    "method": "In-memory storage substitute"
+  }
+}
