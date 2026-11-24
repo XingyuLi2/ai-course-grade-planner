@@ -1,30 +1,30 @@
-# 参考仓库阅读与内容映射
+# 参考来源与文档组织
 
-查阅日期：2026-11-25。参考 [MysteryHost AI Lite](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main) 的作品集组织方式；本项目保留课程成绩场景、现有代码和实际证据，不引入参考项目的技术栈或功能。
+查阅日期：2026-11-25。参考项目：[MysteryHost AI Lite](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main)。采用其“产品展示 → 需求与设计 → Prompt → 状态 → 评测 → 学习笔记”的组织思路，内容围绕课程成绩规划工具编写。
 
-## 实际查阅范围
+## 内容对应
 
-通过 GitHub 连接器读取 main 的递归目录、README、产品需求、Prompt 设计及主持人 Prompt 模板、状态设计、评测文档；读取结构化输出、状态管理、评测与风险控制三篇学习笔记。目录结果未截断。
-
-- 目录树 SHA：`81f08ad5d7d17af863f29e85fbf212419ccc0d8f`（树标识，不是提交 SHA）。
-- README blob SHA：`6bc537ad1b6c01514495ebb5a98e4f14e1a82d7d`。
-- 已核实 `assets/screenshots/homepage.png` 存在，并被 README 嵌入。截图 blob SHA：`4a2c627e27c08f15858c67121b9bd14fef1386f5`。本次网页工具未能显示图片，未对图片视觉内容作判断，也未下载或复制参考截图。
-
-读取时参考 README 前半保留早期本地 mock 介绍，后半 V0.4 说明已有后端与 API；PRD 和部分设计文档仍写早期阶段。这些是来源文件的不同版本描述，不据此推断每个能力已经通过独立验证。本项目借鉴其导航体系，同时在自己的文档中明确区分当前能力、计划和历史检查。
-
-## 如何对应到课程成绩工具
-
-| 参考内容与来源 | 本项目采用的组织方式 | 本项目入口与边界 |
+| 参考内容 | 本项目对应 | 组织重点 |
 | --- | --- | --- |
-| [README](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/README.md) 与 [截图目录](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main/assets/screenshots) | 先让读者理解场景和体验方式，再进入设计证据 | [产品 README](../README.md)；只使用本项目实际界面截图，合成课程标识保留 |
-| [产品需求](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/product-requirements.md) | 场景、用户任务、范围、流程、验收分别说明 | [产品需求](product-requirements.md)；需求来自发起人经历与反馈，没有虚构访谈 |
-| [Prompt 设计](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/prompt-design.md) 与 [模板](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/src/prompts/host-prompt.md) | 将角色、输入、限制与输出格式落实为可复用模板 | [规则提取 Prompt](../prompts/extract-rules.md)；用于独立实验，网页模拟流程不调用它 |
-| [状态设计](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/state-design.md) | 说明信息在何时能显示、修改和提交 | [状态与数据保护](state-design.md)；聚焦实际/预计、规则确认、草稿、保存，不称模型记忆 |
-| [评测指标](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/evaluation-metrics.md) | 将质量拆成可检查的问题和失败情形 | [自动检查](../tests/README.md)、[浏览器清单](browser-checklist.md)、[模型实验](../evaluation/README.md) 各自报告，不能相互充数 |
-| [结构化输出笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/04-structured-output.md)、[状态笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/05-memory-and-state-management.md)、[评测笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/07-ai-evaluation-and-risk-control.md) | 用项目中的具体决定解释概念，再设置面试自检题 | [项目取舍笔记](../learning-notes/decisions.md)；由 Codex 协助整理，不声明发起人已经系统掌握全部知识 |
+| [README](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/README.md) 与 [截图目录](https://github.com/yuuu956/mysteryhost-ai-lite/tree/main/assets/screenshots) | [项目首页](../README.md) | 入口、截图、项目动机、功能、体验流程、技术与文档导航 |
+| [产品需求](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/product-requirements.md) | [产品需求文档](product-requirements.md) | 定位、目标用户、痛点、目标、范围、流程、功能、验收与版本安排 |
+| [Prompt 设计](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/prompt-design.md) 与 [Prompt 模板](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/src/prompts/host-prompt.md) | [Prompt 设计](prompt-design.md) 与 [规则提取模板](../prompts/extract-rules.md) | 提取任务、材料范围、字段、约束、输出与处理流程 |
+| [状态设计](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/state-design.md) | [状态设计](state-design.md) | 当前状态、派生结果、交互变化、数据保护与持续保存 |
+| [评测指标](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/docs/evaluation-metrics.md) | [验证说明](validation.md)、[自动检查](../tests/README.md)、[模型实验](../evaluation/README.md) | 将质量要求转成可检查的任务、预期和错误分类 |
+| [结构化输出笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/04-structured-output.md)、[状态笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/05-memory-and-state-management.md)、[评测笔记](https://github.com/yuuu956/mysteryhost-ai-lite/blob/main/learning-notes/07-ai-evaluation-and-risk-control.md) | [项目学习笔记](../learning-notes/decisions.md) | 概念、项目应用、具体例子与复盘问题 |
 
-参考仓库的 Agent 工作流目录用于游戏主持场景；课程工具当前没有模型选择工具或自动执行任务的流程，因此不为目录齐全增加 Agent 文档或功能。这里的流程直接在产品需求和状态设计中说明。
+课程工具的流程直接体现在需求和状态文档中；当前不引入 Agent、知识库或额外功能。参考项目的代码、截图、文案、技术栈与成果不作为本项目内容或证据。
 
-## 不移用的成果
+## 来源版本
 
-参考项目的截图、剧本内容、代码、技术栈、Release、API 接入、部署和效果均不属于本项目证据。本次只引用来源链接，不复制正文、图片或代码。课程项目的代码上传、静态 Demo 部署、真实模型实验和网页模型接入分别记录；链接存在也不能替代实际运行与质量检查。
+本次阅读范围包括 main 目录、README、产品需求、Prompt 设计与模板、状态、评测和上表三篇学习笔记。参考 README 同时保留早期模拟版介绍与后续 API 版本说明，部分设计文档仍对应早期阶段；本项目各页按当前演示版状态编写。
+
+| 来源对象 | SHA |
+| --- | --- |
+| main 目录树 | `81f08ad5d7d17af863f29e85fbf212419ccc0d8f` |
+| README 文件 | `6bc537ad1b6c01514495ebb5a98e4f14e1a82d7d` |
+| 产品需求文件 | `3e55316098f5b92f58dd368139a89cbce05ed5bf` |
+| 状态设计文件 | `8ce6d6dab1c4a2c8140e42dcd8008d049acfd06c` |
+| README 引用的 `assets/screenshots/homepage.png` | `4a2c627e27c08f15858c67121b9bd14fef1386f5` |
+
+目录树 SHA 与文件 blob SHA 用于定位读取对象，不是提交 SHA。参考截图记录其路径与嵌入方式；产品展示使用本项目运行截图。

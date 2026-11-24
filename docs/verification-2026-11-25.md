@@ -9,7 +9,7 @@
 | 对象 | 方法 | 结果与证据 |
 | --- | --- | --- |
 | 环境 | `python3 --version`；检查 `node` 命令与现有工程 | Python 3.12.13；系统无可用 node 命令；此前无产品代码，未覆盖现有产品工程 |
-| 计算 | 在 Codex 本机 Node REPL 导入 `tests/calculation.test.mjs`，执行 `runTests()` | 50/50 通过；含契约12个独立手算例；[完整输出](../tests/latest-calculation-results.json) |
+| 计算 | 在本机 Node REPL 导入 `tests/calculation.test.mjs`，执行 `runTests()` | 50/50 通过；含契约12个独立手算例；[完整输出](../tests/latest-calculation-results.json) |
 | 存储模块 | 同一运行环境导入 `tests/storage.test.mjs`，执行 `runStorageTests()` | 13/13通过；用内存替身检查损坏、配额、权限、多标签冲突等；[完整输出](../tests/latest-storage-results.json) |
 | 页面脚本语法 | 对dist的4个 `.mjs` 以 Node VM `SourceTextModule` 解析 | app / calc / sample / storage 全部可解析；不等于DOM交互通过 |
 | 本地服务 | `python3 course-grade/serve.py` | 沙盒首次禁止监听；授权后绑定127.0.0.1:8000成功，只服务course-grade |
