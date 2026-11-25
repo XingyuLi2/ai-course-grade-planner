@@ -2,7 +2,7 @@
 
 AI 产品经理学习作品集｜课程成绩规划 Demo，支持评分规则提取、目标试算与分数持续更新。
 
-**[在线体验 Demo](https://xingyuli2.github.io/ai-course-grade-planner/)** · [产品案例](docs/product-case.md) · [产品需求](docs/product-requirements.md)
+**[在线体验 Demo](https://xingyuli2.github.io/ai-course-grade-planner/)** · [产品案例](docs/product-case.md) · [产品需求文档（PRD）](docs/product-requirements.md)
 
 当前是单课程演示版：配套截图和文字使用明确标注的“模拟提取”，计算与浏览器本地保存真实实现。自己的新材料只能预览，尚未接入真实模型。直接打开 Demo 即可体验，无需安装或 API Key。
 
@@ -43,7 +43,7 @@ AI 产品经理学习作品集｜课程成绩规划 Demo，支持评分规则提
 | 生成结果允许修正 | 项目名、占比或满分可能有误，用户需要纠正入口 | 影响计算的规则变更后需重新核对 |
 | 同一浏览器持续保存 | 先把一门课的第二次更新做完整 | 不跨设备同步；换浏览器或地址不共享记录，无备份功能 |
 
-这些取舍如何从反馈形成，见[产品案例](docs/product-case.md)；具体交互要求见[产品需求](docs/product-requirements.md)。
+这些取舍如何从反馈形成，见[产品案例](docs/product-case.md)；具体交互要求见[产品需求文档（PRD）](docs/product-requirements.md)。
 
 ## 4. AI、程序和用户各负责什么
 
@@ -74,7 +74,7 @@ AI 产品经理学习作品集｜课程成绩规划 Demo，支持评分规则提
 | 想了解什么 | 阅读入口 |
 | --- | --- |
 | 为什么做、反馈如何改变设计 | [产品案例](docs/product-case.md) |
-| 用户要完成什么、各功能怎样验收 | [产品需求](docs/product-requirements.md) |
+| 六项核心需求、交互规则与验收证据 | [产品需求文档（PRD）](docs/product-requirements.md) |
 | 提取任务、输出字段与核对边界 | [Prompt 设计](docs/prompt-design.md) · [固定 Prompt](prompts/extract-rules.md) |
 | 修改何时生效、取消和保存异常如何处理 | [状态设计](docs/state-design.md) |
 | 如何判断设计有效、已有证据有哪些 | [验证说明](docs/validation.md) · [独立模型实验准备](evaluation/README.md) |
